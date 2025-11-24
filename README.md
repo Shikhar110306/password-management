@@ -82,7 +82,7 @@ def view_password(fernet):
             encrypted_password = data[website].encode()
             
             decrypted_password = fernet.decrypt(encrypted_password).decode()
-            print(f"🔑 Password for '{website}': **{decrypted_password}**")
+            print(f" Password for '{website}': **{decrypted_password}**")
         except Exception as e:
             print(f" Error decrypting password. Key might be corrupted. ({e})")
     else:
